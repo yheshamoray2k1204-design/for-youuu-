@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You, Iya</title>
+    <title>For Someone Special ✨</title>
     <style>
         body {
             margin: 0;
@@ -12,7 +12,6 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-          
             background: linear-gradient(-45deg, #d8f3dc, #74c69d, #2d6a4f, #1b4332);
             background-size: 400% 400%;
             animation: gradientBG 10s ease infinite;
@@ -33,10 +32,10 @@
             text-align: center;
             transition: all 0.5s ease;
         }
-        h1 { color: #2d6a4f; margin-bottom: 20px; font-size: 1.8rem; }
-        p { line-height: 1.7; font-size: 1.05rem; margin-bottom: 15px; color: #2d3748; }
+        h1 { color: #2d6a4f; margin-bottom: 20px; font-size: 1.8rem; text-align: center; }
+        p { line-height: 1.7; font-size: 1.05rem; margin-bottom: 15px; color: #2d3748; text-align: left; }
+        .center-text { text-align: center; }
         
-        /* Interactive Button Style */
         .btn {
             background-color: #2d6a4f;
             color: white;
@@ -49,51 +48,53 @@
             margin-top: 15px;
             box-shadow: 0 4px 10px rgba(45, 106, 79, 0.2);
             transition: 0.2s ease;
+            display: inline-block;
         }
         .btn:hover {
             background-color: #1b4332;
             transform: translateY(-2px);
         }
-        
-        
-        .hidden {
-            display: none !important;
-        }
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
 
-   
-    <div id="welcomeScreen" class="card">
-        <h1>Haii, wel is come pooe! ✨</h1>
-        <p>Click the button below po hehe :")</p>
-        <button class="btn" onclick="openSurprise()">Open your sur is prise from chay</button>
+    <!-- SCREEN 1: WELCOME SCREEN -->
+    <div id="screen1" class="card">
+        <h1 class="center-text">Hello, Welcome po Iyaaa koo 💚💙</h1>
+        <p class="center-text">Click the button belowww :")</p>
+        <button class="btn" onclick="showScreen2()">Open your surprise poo</button>
+    </div>
+
+    <div id="screen2" class="card hidden">
+        <h1>For You, Iya</h1>
+        
+        <p>Haii pooo ethann, panganayyy, ethan gabriel peñaflorr, Iyaaaaaa koooooo, very thankful po talaga ako sa message mo and I didn't expect that you write me a long message, ikaw haa... anyways, I'm speechless as in like wowahh kasi hindi din po ako sanay na may naga long message sa'kin and most of the time ako po naga long message sa mga friends ko hehe, I'm very grateful that i met someone like you ;)</p>
+        
+        <p>I also pray kay Lord po na sana mag tagal tayo, we will wait pag right time n'ya na and if ever man na hindi po tayo mag tagal i hope that you will find someone and be the right person that God sent to you pero ayaw ko din naman na mawala ka e, I'm willing to reconnect with you if hindi ito nag work. You know naman na mahal na mahal kita e :")</p>
+        
+        <p>Yun langg poooo, sorryy po if hindi ito mahabang mahaba, sabog na ata utak q eh, perooo I loveeee youuu soo muchhh pooo Iyaaaaa koooooooooooooooo 💙💚</p>
+        
+        <div class="center-text">
+            <button class="btn" onclick="showScreen3()">Click for final sur is prisee ehe</button>
+        </div>
     </div>
 
    
-    <div id="letterScreen" class="card hidden">
-        <h1>F</h1>
-        
-
-        <p>
-          Haii pooo ethann, panganayyy, ethan gabriel peñaflorr, Iyaaaaaa koooooo🥹
-          very thankful po talaga ako sa message mo and i didn't expect that you write me a long message, ikaw haa🥺 anyways, I'm speechless as in like wowahh kasi 
-          hindi din po ako sanay na may naga long message sa'kin and most of the time ako po naga long message sa mga friends ko hehe, I'm very grateful that i met someone like you ;) 
-          I also pray kay Lord po na sana mag tagal tayo, we will wait pag right time n'ya na and if ever man na hindi po tayo mag tagal i hope that you will find someone and be the
-          right person that God sent to you pero ayaw ko din naman na mawala ka e, I'm willing to reconnect with you if hindi ito nag work out. You know naman na mahal na mahal kita e :")
-        </p>
-        
-        <p>
-           Yun langg poooo, sorrryy po if hindi ito mahabang mahaba, sabog na ata utak q eh, perooo I loveeee youuu soo muchhhh poooo Iyaaaaa koooooooooooooooo 💚💙
-        </p>
-        
-        <div style="font-size: 1.8rem; margin-top: 20px;">💚💙</div>
+    <div id="screen3" class="card hidden">
+        <h1 class="center-text">un langs 💚💙</h1>
+        <p class="center-text" style="text-align: center;"></p>
+        <div class="center-text" style="font-size: 2.5rem; margin-top: 20px;"></div>
     </div>
 
     <script>
-        function openSurprise() {
-            document.getElementById('welcomeScreen').classList.add('hidden');
-            document.getElementById('letterScreen').classList.remove('hidden');
+        function showScreen2() {
+            document.getElementById('screen1').classList.add('hidden');
+            document.getElementById('screen2').classList.remove('hidden');
+        }
+        function showScreen3() {
+            document.getElementById('screen2').classList.add('hidden');
+            document.getElementById('screen3').classList.remove('hidden');
         }
     </script>
 
