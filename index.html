@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, Iya</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+          
+            background: linear-gradient(-45deg, #d8f3dc, #74c69d, #2d6a4f, #1b4332);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(27, 67, 50, 0.25);
+            max-width: 450px;
+            width: 85%;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+        h1 { color: #2d6a4f; margin-bottom: 20px; font-size: 1.8rem; }
+        p { line-height: 1.7; font-size: 1.05rem; margin-bottom: 15px; color: #2d3748; }
+        
+        /* Interactive Button Style */
+        .btn {
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(45, 106, 79, 0.2);
+            transition: 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #1b4332;
+            transform: translateY(-2px);
+        }
+        
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <div id="welcomeScreen" class="card">
+        <h1>Haii, wel is come pooe! ✨</h1>
+        <p>Click the button below po hehe :")</p>
+        <button class="btn" onclick="openSurprise()">Open your sur is prise from chay</button>
+    </div>
+
+   
+    <div id="letterScreen" class="card hidden">
+        <h1>F</h1>
+        
+
+        <p>
+          Haii pooo ethann, panganayyy, ethan gabriel peñaflorr, Iyaaaaaa koooooo🥹
+          very thankful po talaga ako sa message mo and i didn't expect that you write me a long message, ikaw haa🥺 anyways, I'm speechless as in like wowahh kasi 
+          hindi din po ako sanay na may naga long message sa'kin and most of the time ako po naga long message sa mga friends ko hehe, I'm very grateful that i met someone like you ;) 
+          I also pray kay Lord po na sana mag tagal tayo, we will wait pag right time n'ya na and if ever man na hindi po tayo mag tagal i hope that you will find someone and be the
+          right person that God sent to you pero ayaw ko din naman na mawala ka e, I'm willing to reconnect with you if hindi ito nag work out. You know naman na mahal na mahal kita e :")
+        </p>
+        
+        <p>
+           Yun langg poooo, sorrryy po if hindi ito mahabang mahaba, sabog na ata utak q eh, perooo I loveeee youuu soo muchhhh poooo Iyaaaaa koooooooooooooooo 💚💙
+        </p>
+        
+        <div style="font-size: 1.8rem; margin-top: 20px;">💚💙</div>
+    </div>
+
+    <script>
+        function openSurprise() {
+            document.getElementById('welcomeScreen').classList.add('hidden');
+            document.getElementById('letterScreen').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
